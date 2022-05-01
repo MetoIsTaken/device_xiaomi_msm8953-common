@@ -547,6 +547,9 @@
     -->
     <integer name="config_deviceSupportsButtonBrightnessControl">1</integer>
 
+    <bool name="config_button_brightness_support">true</bool>
+    <integer name="config_button_brightness_default">128</integer>
+
     <!-- List of comma separated package names for 
     which we the system will not show crash, ANR,
          etc. dialogs. --> 
