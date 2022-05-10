@@ -576,6 +576,16 @@ on property:init.svc.surfaceflinger=restarting
     start vendor.hwcomposer-2-1
     start vendor.hwcomposer-2-2
 
+on late-init
+    # Start services early for bootanim
+    start surfaceflinger
+    start bootanim
+    start themed_bootanimation
+    start vendor.hwcomposer-2-1
+    start vendor.hwcomposer-2-2
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
